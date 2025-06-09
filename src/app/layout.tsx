@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-
-const notoSansKR = Noto_Sans_KR({
-  variable: "--font-noto-sans-kr",
-  preload: false
-})
 
 export const metadata: Metadata = {
   title: "블루시스 마켓",
@@ -38,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-        className={`${notoSansKR.variable} antialiased`}
+        className={`antialiased`}
       >
         <ThemeProvider
           attribute="class"
