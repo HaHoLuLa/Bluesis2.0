@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle";
 import { Menu, Search } from "lucide-react";
 
 export default function Home() {
