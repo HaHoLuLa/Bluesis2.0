@@ -44,20 +44,20 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <div className="grid grid-cols-[2fr_1fr] gap-5 mt-5">
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">a</div>
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">b</div>
-          <div className="p-3 border-2 border-primary rounded-lg row-span-2">c</div>
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">d</div>
-          <div className="p-3 h-80 border-2 border-primary rounded-lg">e</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">f</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">g</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">h</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">i</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">j</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">k</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">l</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">m</div>
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 mt-5">
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">배너1</div>
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">로그인</div>
+          <div className="p-3 h-40 md:h-auto border-2 border-primary rounded-lg row-span-2">레시피</div>
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">공지사항</div>
+          <div className="p-3 h-80 border-2 border-primary rounded-lg">배너2</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">상품동영상</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">e카탈로그</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">상품상세설명</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">오늘의식판</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">이벤트상품</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">인기상품</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">시장조사배너</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">기타</div>
         </div>
       </main>
       <footer></footer>
