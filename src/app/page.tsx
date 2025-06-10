@@ -43,7 +43,23 @@ export default function Home() {
           </section>
         </div>
       </header>
-      <main></main>
+      <main>
+        <div className="grid grid-cols-[2fr_1fr] gap-5 mt-5">
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">a</div>
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">b</div>
+          <div className="p-3 border-2 border-primary rounded-lg row-span-2">c</div>
+          <div className="p-3 h-40 border-2 border-primary rounded-lg">d</div>
+          <div className="p-3 h-80 border-2 border-primary rounded-lg">e</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">f</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">g</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">h</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg">i</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">j</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">k</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">l</div>
+          <div className="p-3 h-50 border-2 border-primary rounded-lg col-span-2">m</div>
+        </div>
+      </main>
       <footer></footer>
     </div>
   )
