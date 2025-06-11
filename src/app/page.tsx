@@ -1,9 +1,12 @@
 "use client";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, ShoppingCart, User } from "lucide-react";
 import Image from "next/image";
 import AutoPlay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,8 +31,9 @@ export default function Home() {
               </ul>
             </nav>
           </section>
-          <section className="flex justify-end">
-            {/* <ModeToggle /> */}
+          <section className="md:flex justify-end hidden">
+            {/* <User /> */}
+            <ShoppingCart />
           </section>
         </div>
         <div className="mt-5 border-y border-gray-200">
@@ -50,7 +54,7 @@ export default function Home() {
       </header>
       <main>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 mt-5">
-          <Carousel plugins={[AutoPlay({ delay: 3000 })]} opts={{ loop: true }}>
+          <Carousel plugins={[AutoPlay({ delay: 5000 })]} opts={{ loop: true }}>
             <CarouselContent>
               {[
                 "https://market.bluesis.com/web/img/cj_banner13.jpg",
@@ -59,7 +63,7 @@ export default function Home() {
               ].map((src, idx) => (
                 <CarouselItem key={idx} className="h-40 w-full">
                   <div className="relative w-full h-full">
-                    <Image src={src} alt={`banner-${idx}`} fill className="object-cover rounded-md" />
+                    <Image src={src} alt={`banner-${idx}`} fill className="rounded-lg" />
                   </div>
                 </CarouselItem>
               ))}
@@ -67,18 +71,20 @@ export default function Home() {
             {/* <CarouselPrevious />
             <CarouselNext /> */}
           </Carousel>
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">로그인</div>
-          <div className="p-3 h-40 md:h-auto border-2 border-primary rounded-lg row-span-2">레시피</div>
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">공지사항</div>
-          <div className="p-3 h-80 border-2 border-primary rounded-lg">배너2</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">상품동영상</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">e카탈로그</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">상품상세설명</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg">오늘의식판</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">이벤트상품</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">인기상품</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">시장조사배너</div>
-          <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">기타</div>
+          <Card className="p-3 h-40">
+            ?
+          </Card>
+          <Card className="p-3 h-40 md:h-auto row-span-2">레시피</Card>
+          <Card className="p-3 h-40">공지사항</Card>
+          <Card className="p-3 h-80">배너2</Card>
+          <Card className="p-3 h-50">상품동영상</Card>
+          <Card className="p-3 h-50">e카탈로그</Card>
+          <Card className="p-3 h-50">상품상세설명</Card>
+          <Card className="p-3 h-50">오늘의식판</Card>
+          <Card className="p-3 h-50 md:col-span-2">이벤트상품</Card>
+          <Card className="p-3 h-50 md:col-span-2">인기상품</Card>
+          <Card className="p-3 h-50 md:col-span-2">시장조사배너</Card>
+          <Card className="p-3 h-50 md:col-span-2">기타</Card>
         </div>
       </main>
       <footer>
