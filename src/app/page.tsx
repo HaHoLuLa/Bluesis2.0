@@ -1,4 +1,9 @@
+"use client";
+
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Menu, Search } from "lucide-react";
+import Image from "next/image";
+import AutoPlay from "embla-carousel-autoplay";
 
 export default function Home() {
   return (
@@ -45,7 +50,23 @@ export default function Home() {
       </header>
       <main>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 mt-5">
-          <div className="p-3 h-40 border-2 border-primary rounded-lg">배너1</div>
+          <Carousel plugins={[AutoPlay({ delay: 3000 })]} opts={{ loop: true }}>
+            <CarouselContent>
+              {[
+                "https://market.bluesis.com/web/img/cj_banner13.jpg",
+                "https://market.bluesis.com/web/img/sj_banner7.jpg",
+                "https://market.bluesis.com/web/img/fs_banner02.jpg",
+              ].map((src, idx) => (
+                <CarouselItem key={idx} className="h-40 w-full">
+                  <div className="relative w-full h-full">
+                    <Image src={src} alt={`banner-${idx}`} fill className="object-cover rounded-md" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {/* <CarouselPrevious />
+            <CarouselNext /> */}
+          </Carousel>
           <div className="p-3 h-40 border-2 border-primary rounded-lg">로그인</div>
           <div className="p-3 h-40 md:h-auto border-2 border-primary rounded-lg row-span-2">레시피</div>
           <div className="p-3 h-40 border-2 border-primary rounded-lg">공지사항</div>
@@ -60,7 +81,23 @@ export default function Home() {
           <div className="p-3 h-50 border-2 border-primary rounded-lg md:col-span-2">기타</div>
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div className="my-10 border-t border-gray-200">
+          <nav className="mt-5">
+            <ul className="flex gap-2 md:gap-10 justify-between md:justify-start font-bold text-xs md:text-sm items-center">
+              <li>이용약관</li>
+              <li>개인정보처리방침</li>
+              <li>고객센터</li>
+            </ul>
+          </nav>
+          <div className="text-xs text-gray-500 mt-5 text-center">
+            <p>© 2023 Bluesis Market. All rights reserved.</p>
+            <p>대표이사: 홍길동 | 사업자등록번호: 123-45-67890</p>
+            <p>주소: 서울특별시 강남구 테헤란로 123, 456호</p>
+            <p>고객센터: 02-1234-5678 | 이메일: </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
