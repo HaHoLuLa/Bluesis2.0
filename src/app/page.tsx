@@ -1,4 +1,4 @@
-import { Menu, Search } from "lucide-react";
+import { HomeIcon, Menu, Search, User2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import MainBanner from "@/app/components/MainBanner";
 import RightBanner from "@/app/components/RightBanner";
@@ -50,7 +50,7 @@ export default function Home() {
       <main>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-5 mt-5">
           <MainBanner />
-          <Card className="p-3 h-40">로그인</Card>
+          <Card className="p-3 h-40 hidden md:block">로그인</Card>
           <Card className="p-3 h-40 md:h-auto row-span-2">레시피</Card>
           <Card className="p-3 h-40">공지사항</Card>
           <RightBanner />
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </main>
       <footer>
-        <div className="my-10 border-t border-gray-200">
+        <div className="my-20 md:my-10 border-t border-gray-200">
           <nav className="mt-5">
             <ul className="flex gap-2 md:gap-10 justify-around md:justify-start font-bold text-xs md:text-sm items-center">
               <li>이용약관</li>
@@ -81,6 +81,28 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <div className="fixed md:hidden bottom-0 left-0 right-0">
+        <nav>
+          <ul className="flex justify-around bg-white border-t border-gray-200 py-2">
+            <li className="text-center">
+              <HomeIcon className="mx-auto text-primary" />
+              <span className="text-xs">홈</span>
+            </li>
+            <li className="text-center">
+              <Menu className="mx-auto text-primary" />
+              <span className="text-xs">메뉴</span>
+            </li>
+            <li className="text-center">
+              <Search className="mx-auto text-primary" />
+              <span className="text-xs">검색</span>
+            </li>
+            <li className="text-center">
+              <User2 className="mx-auto text-primary" />
+              <span className="text-xs">로그인</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }
