@@ -74,10 +74,10 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-xs text-gray-500 mt-5 text-center">
-            <p>© 2023 Bluesis Market. All rights reserved.</p>
-            <p>대표이사: 홍길동 | 사업자등록번호: 123-45-67890</p>
-            <p>주소: 서울특별시 강남구 테헤란로 123, 456호</p>
-            <p>고객센터: 02-1234-5678 | 이메일: </p>
+            <p>© 2025 Bluesis Market. All rights reserved.</p>
+            <p>사업자등록번호 : 502-86-04281 | 통신판매신고번호 : 2017-대구동구-0052 | 대표자 : 지승현 | 개인정보책임자 : 김동수 | 이메일 : help@bluesis.com</p>
+            <p>회사명 : 블루시스 | 주소 : 경기 성남시 수정구 시흥동 292-3 (판교제2테크노밸리 글로벌비즈센터 B동 1010호) | 대구광역시 동구 동부로 30길 59, 2층</p>
+            <p>문의전화 : 02-408-7055 | 팩스 : 0505-070-7055</p>
           </div>
         </div>
       </footer>
