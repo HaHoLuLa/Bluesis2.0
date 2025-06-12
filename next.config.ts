@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/web/img/**"
       },
+      {
+        protocol: "https",
+        hostname: "market.bluesis.com",
+        port: "",
+        pathname: "/board/data/file/pro_dinfo/**"
+      },
     ]
   }
 };
