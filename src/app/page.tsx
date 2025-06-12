@@ -1,12 +1,10 @@
 "use client";
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { Menu, Search, ShoppingCart, User } from "lucide-react";
+import { Menu, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import AutoPlay from "embla-carousel-autoplay";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Link from "next/link";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
